@@ -1,0 +1,159 @@
+@mixin transform ($degree){
+
+  transform:rotate($degree);
+	-ms-transform:rotate($degree);
+	-webkit-transform:rotate($degree);
+	-o-transform:rotate($degree);
+	-moz-transform:rotate($degree);
+}
+
+@mixin transformscale ($scale){
+  transform: scale($scale);
+  -ms-transform:scale($scale);
+  -webkit-transform:scale($scale);
+  -o-transform:scale($scale);
+  -moz-transform:scale($scale);
+}
+
+
+
+@mixin transformX ($xpercent){
+
+  transform:translateX($xpercent);
+	-ms-transform:translateX($xpercent);
+	-webkit-transform:translateX($xpercent);
+	-o-transform:translateX($xpercent);
+	-moz-transform:translateX($xpercent);
+}
+
+
+@mixin transformY ($ypercent){
+
+  transform:transformY($ypercent);
+	-ms-transform:transformY($ypercent);
+	-webkit-transform:transformY($ypercent);
+	-o-transform:transformY($ypercent);
+	-moz-transform:transformY($ypercent);
+}
+
+
+@mixin transformXY($xpercent,$ypercent) {
+  transform: translate($xpercent, $ypercent);
+  -ms-transform: translate($xpercent, $ypercent);
+  -webkit-transform: translate($xpercent, $ypercent);
+  -o-transform: translate($xpercent, $ypercent);
+  -moz-transform: translate($xpercent, $ypercent);
+}
+
+@mixin transform-origin ($xpercent ,  $ypercent){
+  transform-origin: $xpercent $ypercent;
+  -ms-transform-origin:$xpercent $ypercent;
+  -webkit-transform-origin:$xpercent $ypercent;
+  -o-transform-origin:$xpercent $ypercent;
+  -moz-transform-origin:$xpercent $ypercent;
+}
+
+@mixin border-radius ($radius){
+  border-radius: $radius;
+  -ms-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin translateX ($X) {
+  transform: translateX($X);
+  -ms-transform:translateX($X);
+  -webkit-transform:translateX($X);
+  -o-transform:translateX($X);
+  -moz-transform:translateX($X);
+}
+
+@mixin translateY ($Y) {
+  transform: translateY($Y);
+  -ms-transform:translateY($Y);
+  -webkit-transform:translateY($Y);
+  -o-transform:translateY($Y);
+  -moz-transform:translateY($Y);
+}
+
+@mixin translateXY ($X,$Y) {
+  transform: translate($X, $Y);
+  -ms-transform: translate($X, $Y);
+  -webkit-transform: translate($X, $Y);
+  -o-transform: translate($X, $Y);
+  -moz-transform: translate($X, $Y);
+}
+
+
+
+@mixin transformtranslate ( $degree, $xpixel ,  $ypixel) {
+  transform:rotate($degree) translate($xpixel, $ypixel);
+  -ms-transform:rotate($degree) translate($xpixel, $ypixel);
+  -webkit-transform:rotate($degree) translate($xpixel, $ypixel);
+  -o-transform:rotate($degree) translate($xpixel, $ypixel);
+  -moz-transform:rotate($degree) translate($xpixel, $ypixel);
+}
+
+@mixin stroketext($width, $color) {
+   -webkit-text-stroke-width: $width;
+   -webkit-text-stroke-color: $color;
+   -ms-text-stroke-width: $width;
+   -ms-text-stroke-color: $color;
+   -o-text-stroke-width: $width;
+   -o-text-stroke-color: $color;
+   -moz-text-stroke-width: $width;
+   -moz-text-stroke-color: $color;
+}
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-snakktablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px)  and (orientation: portrait) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px)  and (orientation: landscape) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (min-width: 900px) and (max-width: 1199px)  and (orientation: portrait) { @content; }
+}
+
+@mixin for-bigtablet-landscape-only {
+  @media (min-width: 1200px) and (max-width: 1800px)  and (orientation: landscape) { @content; }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+@mixin for-iphone5 {
+  @media (max-width: 320px) and (orientation: portrait) { @content; }
+}
+
+@mixin for-slider{
+  @media (min-width: 320px) and (max-width: 1199px) and (orientation: portrait) {@content;}
+}
+
+@mixin for-display{
+  @media ( min-width: 800px) and (orientation: landscape) { @content; }
+}
+
+@mixin for-iphone6{
+   @media (max-width: 599px) and (min-height:610px) and (orientation: portrait) { @content; }
+}
+
+

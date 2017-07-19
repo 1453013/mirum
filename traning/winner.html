@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+	<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css'>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick-theme.css'>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="scss/main.css" />
+
+	
+
+<!-- 	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" /> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script src="js/perfect-scrollbar.jquery.min.js"></script>
+	<script src="js/perfect-scrollbar.min.js"></script>
+
+	<script type="text/javascript" src="js//scrolloverflow.js"></script>
+	<script src="js/stickyMojo.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+
+	<script type="text/javascript" src="js/sticky-kit.min.js"></script>
+
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
+</head>
+<body>
+
+<div class="header">
+	
+	<div class="row">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<div class="logo">
+			<a class="" href=""><img src="img/logo.png">
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 navbar-nav">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<ul class="nav navbar-nav">
+						<li class="big"><a href="#">WHY JOINING?</a></li>
+						<li><a href="#">MECHANIC</a></li>
+						<li><a href="#">JURY</a></li>
+						<li><a href="#">ARCHIVE</a></li>
+						<li><a href="#">PARTNERS</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">NEWS</a></li>
+						<li class="active"><a href="#">REGISTER</a></li>
+					</ul>
+				</div>
+				</nav>	
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<div class="org">
+			<p>Organized by</p>
+			<a class="" href=""><img src="img/aimlogotop.png">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="header-mobile">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a class="navbar-brand logo" href="#"><img src="img/logo.png"></a>
+				<a class="navbar-brand org" href="#"><p>Organized by</p><img src="img/aimlogotop.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#">WHY JOINING?</a></li>
+					<li><a href="#">MECHANIC</a></li>
+					<li><a href="#">JURY</a></li>
+					<li><a href="#">ARCHIVE</a></li>
+					<li><a href="#">PARTNERS</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">NEWS</a></li>
+					<li class="active"><a href="#">REGISTER</a></li>					
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<div class="banner">
+<div class="banner-content">
+	<h1> winner </h1>
+	<h2>Winning the Vietnam Young Spikes award is a global <br> benchmark of creative excellence that propels one's <br> career. Take a look at the Champions for 2016!
+</div>
+</div>
+
+
+<section class="main-wrapper" id="main-wrapper">
+
+<div class="side-menu" id="mySideBar">
+	<div class="side-menu-item">
+		<div class="active" id="socialregis">
+			<img src="img/regislogo.png">
+			<p>Register</p>
+		</div>
+	</div>
+	<div class="side-menu-item">
+		<div class="" id="socialchat">
+			<img src="img/chatlogo.png">
+		</div>
+	</div>
+	<div class="side-menu-item">
+		<div class="" id="socialyoutube">
+			<img src="img/youtubelogo.png">
+		</div>
+	</div>
+	<div class="side-menu-item">
+		<div class="" id="socialfb">
+			<img src="img/fblogored.png">
+		</div>
+	</div>
+</div>
+
+
+
+<div id="myContent">
+
+<div clas="tab-gallery">
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#home">film</a></li>
+    <li><a href="#menu1">marketers</a></li>
+    <li><a href="#menu2">cyber</a></li>
+  </ul>
+
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+    	 <div class="wrapper">
+		  <div class="portfolio-item-slider">
+		    <div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+		      <div class="slick-item-caption">
+		      <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+		      </div>
+		    </div>
+		    <div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+			</div>
+			<div class="slick-slider-item">
+		      <img src="img/livestream.png" alt="" />
+		    </div>
+		  </div>
+  		<!-- .portfolio-item-slider -->
+		  <div class="portfolio-thumb-slider">
+		    <div class="slick-slider-item thumb-item">
+		      <img src="img/thumb1.png" alt="" />
+		    </div> 
+		    <div class="slick-slider-item thumb-item ">
+		      <img src="img/thumb2.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item thumb-item">
+		      <img src="img/thumb3.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item thumb-item">
+		      <img src="img/thumb4.png" alt="" />
+		    </div>
+		    <div class="slick-slider-item thumb-item">
+		      <img src="img/thumb5.png" alt="" />
+			</div>
+			<div class="slick-slider-item thumb-item">
+		      <img src="img/thumb6.png" alt="" />
+		    </div>
+  		   </div>
+		</div>
+	</div>
+    <div id="menu1" class="tab-pane fade">
+		
+		
+    </div>
+    <div id="menu2" class="tab-pane fade">
+    </div>
+  </div>
+
+</div>
+
+<div id = "detail">
+	<div class="award">
+		<div class="award-wrapper">
+		<div id="thecup">
+			<img src="img/cup.jpg">
+		</div>
+		<div id="awardteam">
+			<div class="team-info">
+				<div id="teamgold">
+					<h3 class=gold>- gold award - </h3>
+					<h4> ABCDEFGH TEAM </h4>
+				</div>
+				<div id="teamsilver">
+					<h3 class=silver>- silver award - </h3>
+					<h4> ABCDEFGH TEAM </h4>
+				</div>
+				<div id="teambronze">
+					<h3 class=bronze>- bronze award - </h3>
+					<h4> ABCDEFGH TEAM </h4>
+				</div>
+			<div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+	<div class="shortlist">
+		<div class="shortlist-wrapper">
+		<div id="shortlist-title">
+				<h3>shortlist team</h3>
+		</div>
+		<div id="shortlist-teams">
+				<div id="team1" class="shorteaminfo">
+					<h4>1.cUBS</h4>
+					<p>Tran Dang Anh Phuong</p>
+					<p>Doan Ngoc Hong Minh</p>
+				</div>
+				<div id="team2" class="shorteaminfo">
+					<h4>2.KISS</h4>
+					<p>Nguyen Dinh Giang</p>
+					<p>Nguyen Thi Thanh Vy</p>
+				</div>
+				<div id="team3" class="shorteaminfo">
+					<h4>3.PAWESOME</h4>
+					<p>Phung Ngoc Thach</p>
+					<p>Huynh Dong Bao Phuc</p>
+				</div>
+				<div id="team4" class="shorteaminfo">
+					<h4>4.peaceminustwo</h4>
+					<p>Nguyen Ngoc Tuong Vi</p>
+					<p>Pham Bao Hong</p>
+				</div>
+				<div id="team5" class="shorteaminfo">
+					<h4>5.PsychicBacon</h4>
+					<p>Duong Hong Hanh</p>
+					<p>Le Tuan Anh</p>
+				</div>
+				<div id="team6" class="shorteaminfo">
+					<h4>6.Song Thu</h4>
+					<p>Van Thi Dan Thu</p>
+					<p>Vu Anh Thu</p>
+				</div>
+				<div id="team7" class="shorteaminfo">
+					<h4>7.The Hookers</h4>
+					<p>Nguyen Thu Quynh Anh</p>
+					<p>Tran Quan Trac</p>
+				</div>
+		</div>		
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="footer" id="myFooter">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class="organized">
+				<h4>ORGANIZED BY</h4>
+				<img src="img/aimlogo.png">
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class="contact">
+				<h4>CONTACT US</h4>
+				<p id="address">146Bis <br class="phone-break"> Nguyen Van Thu St, Dist. 1, HCMC, Vietnam</p>
+				<p id="tel">Tel: <br class="phone-break">+84 ( 8) 3911 2275</p>
+				<p id="email">Email: info@aimacademy.vn</p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+			<div class="follow">
+				<h4>FOLLOW US</h4>
+				<a href="https://www.facebook.com/">
+					<div class="facebook-link">
+						<img src="img/fblogo.png">
+						<p>Facebook</p>
+					</div>
+				</a>
+				<a href="https://www.google.com/">
+					<div class="web-link" style="display:inline-block">
+						<img src="img/weblogo.png">
+						<p>Website</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="representatives">
+		<p>We are proud to be the representatives of</p>
+		<img src="img/younglionlogo.png">
+		<img src="img/spikalogo.png">
+	</div>
+	
+</div>
+
+</section>
+
+
+<script>
+
+</script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js'></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
