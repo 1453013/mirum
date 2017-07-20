@@ -58,6 +58,7 @@ html, body {
 	background: white;
 	width: 100%;
 	z-index: 1000;
+	height: 100px;
 	
 	.row {
 		margin-left: 0px;
@@ -92,6 +93,7 @@ html, body {
 			width: (85%/7);
 			font-size: 12px;
 			float: left;
+			height: 100px;
 			
 			@include for-big-desktop-up {
 				font-size: 18px;
@@ -104,8 +106,8 @@ html, body {
 				
 			}
 			a{	
-				padding-top: 35px;
-				padding-bottom: 35px;
+				padding-top: 40px;
+				padding-bottom: 40px;
 				color: black;
 				padding-left: 0px;
 				padding-right: 0px;
@@ -283,10 +285,10 @@ html, body {
 
 
 .banner {
-	margin-top: 90px;
+	margin-top: 100px;
 	background-image: url("../img/banner.png");
 	background-size: 100% 100%;
-	height: 224px;
+	height: 250px;
 	@include for-big-desktop-up {
 		height: 350px;
 	}
@@ -302,7 +304,7 @@ html, body {
 
 
 .banner-content {
-	padding-top: 30px;
+	padding-top: 35px;
 	@include for-big-desktop-up {
 		padding-top: 60px;
 	}
@@ -337,7 +339,7 @@ html, body {
 .nav-tabs>li {
 	width: 33.333%;
 	border-radius: 0px;
-	height: 75px;
+	height: 85px;
 }
 
 .nav-tabs>li>a {
@@ -346,8 +348,8 @@ html, body {
 	text-align: center;
 	font-size: 27px;
 	border:none;
-	height: 75px;
-	padding-top: 17px;
+	height: 85px;
+	padding-top: 25px;
 	letter-spacing: 2px;
 }
 .nav-tabs>li.active {
@@ -396,7 +398,7 @@ $widththumb : 150px;
 
 .tab-content {
 	background-color: #ebebeb;
-	height: 682px;
+	height: 768px;
 }
 
 .wrapper { 
@@ -422,9 +424,9 @@ img {
 .slick-slider { margin-bottom: 0px; }
 .slick-slide img {
 	margin: 0 auto;
-	max-height: 392px;
+	max-height: 442px;
 	max-width: auto;
-	height: auto;
+	height: 442px;
 	width: auto;
 }
 .slick-prev:before,
@@ -443,8 +445,8 @@ img {
 .slick-item-caption {
 	text-align: center;
 	font-family: 'BrandonText-Regular';
-	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 45px;
 	font-size: 18px;
 	@include for-big-desktop-up {
 		font-size: 18px;
@@ -453,9 +455,9 @@ img {
 }
 
 .slick-next, .slick-prev {
-	width: 28px;
-	height: 28px;
-	top: 111%;
+	width: 31px;
+	height: 31px;
+	top: 110%;
 }
 
 .slick-prev {
@@ -479,19 +481,19 @@ img {
 // }
 
 #detail {
-	padding-bottom: 65px;
+	//padding-bottom: 65px;
+	//height: 1485px;
+	margin-bottom: 90px;
 }
 .award {
-	padding-top: 45px;
+	padding-top: 60px;
 	//height: 30%;
 	position: relative;
 }
 
 
-$awardboxsize: 400px;
-@include for-big-desktop-up {
-	$awardboxsize: 400px;
-}
+$awardboxsize: 430px;
+
 
 $awardboxsizemobilde: 250px;
 
@@ -512,14 +514,14 @@ $awardboxsizemobilde: 250px;
 
 #awardteam {
 	position: absolute;
-	top: 70%;
+	top: 180px;
 	height: $awardboxsize;
 	width: $awardboxsize;
 	@include for-phone-only {
 		height: $awardboxsizemobilde;
 		width: $awardboxsizemobilde;
 	}
-	border:solid 10px $active-color;
+	outline:solid 12px $active-color;
 	z-index: -1;
 }
 
@@ -535,15 +537,22 @@ $awardboxsizemobilde: 250px;
 	color: $bronze-color;
 }
 
+
+#teamsilver {
+	margin-top: 35px;
+	margin-bottom: 50px;
+}
 .team-info {
 	text-align: center;
-	margin-top: 87px;
+	margin-top: 100px;
 	@include for-phone-only {
 		margin-top: 50px;
 	}
 	h3 {
 	font-family: 'iCielBrawls1';
-	font-size: 32px;
+	font-size: 36px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	@include for-big-desktop-up {
 				font-size: 30px;
 			}
@@ -553,8 +562,9 @@ $awardboxsizemobilde: 250px;
 			}
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: bold;
+		margin-top: 0px;
 		@include for-phone-only {
 			margin-top: 0px;
 			font-size: 12px;
@@ -564,8 +574,12 @@ $awardboxsizemobilde: 250px;
 	
 }
 
+.team-detail {
+	margin-bottom: 30px;
+}
+
 .shortlist {
-	margin-top: 32%;
+	margin-top: 440px;
 	@include for-big-desktop-up {
 		margin-top: 20%;
 	}
@@ -586,28 +600,43 @@ $awardboxsizemobilde: 250px;
 }
 
 #shortlist-title {
+	
+	width: 20%;
+	margin: 0 auto;
+	white-space: nowrap;
 	h3 {
+		text-align: center;
 		font-family: 'iCielBrawls1';
 		color: $active-color;
-		text-decoration: underline;
-		font-size: 32px;
+		//text-decoration: underline;
+		font-size: 36px;
+		//line-height: 10px;
+		border-bottom: 2px solid $active-color;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		//border-bottom-width: 1px;
 	}
 }
 
 #shortlist-teams {
+	padding-top: 30px;
+	//padding-bottom: 100px;
 	.shorteaminfo {
-		margin-top: 20px;
+		//margin-top: 20px;
 		margin-bottom: 20px;
 		h4 {
-			font-size: 18px;
+			font-size: 20px;
 			margin-bottom: 0;
+			margin-top: 0;
+			line-height: 1;
 			@include for-big-desktop-up {
 				font-size: 23px;
 			}
 		}
 		p{
+			//line-height: 1.1;
 			font-family: 'BrandonText-Regular';
-			font-size: 18px;
+			font-size: 20px;
 			margin-top: 0;
 			margin-bottom: 0;
 			@include for-big-desktop-up {
@@ -622,11 +651,13 @@ $awardboxsizemobilde: 250px;
 	background-color: $footer-color;
 	color: white;
 	font-family: 'BrandonText-Regular';
+	height: 410px;
+	//bottom:0;
 	.row {
 		padding-top: 50px;
 		margin-left: 80px;
 		margin-right: 80px;
-		padding-bottom: 35px;
+		padding-bottom: 40px;
 		@include for-snakktablet-portrait-only {
 			margin-left: 60px;
 			margin-right: 60px;
@@ -644,12 +675,13 @@ $awardboxsizemobilde: 250px;
 		text-align: center;
 		margin-left: 80px;
 		margin-right: 80px;
+		padding-bottom: 10px;
 		@include for-phone-only {
 			margin-left: 15px;
 			margin-right: 15px;
 		}
 		p {
-			font-size: 18px;
+			font-size: 20px;
 			@include for-big-desktop-up {
 				font-size: 20px;
 			}
@@ -660,8 +692,9 @@ $awardboxsizemobilde: 250px;
 		img {
 			margin-right: 10px;
 			margin-left: 10px;
-			max-width: 150px;
-			max-height: auto;
+			//max-width: 150px;
+			max-height: 39px;
+			max-width: auto;
 			width: auto;
 			height: auto;
 			@include for-big-desktop-up {
@@ -677,7 +710,9 @@ $awardboxsizemobilde: 250px;
 }
 
 .contact {
+	margin-left: 100px;
 	h4 {
+		
 		@include for-big-desktop-up {
 				font-size: 30px;
 			}
@@ -685,7 +720,8 @@ $awardboxsizemobilde: 250px;
 			font-size: 15px;
 		}
 	}
-	p{
+	p{	
+		font-size: 20px;
 		@include for-big-desktop-up {
 				font-size: 20px;
 			}
@@ -759,6 +795,7 @@ $awardboxsizemobilde: 250px;
 
 .organized {
 	h4{
+		//font-size: 22px;
 	@include for-big-desktop-up {
 				font-size: 30px;
 			}

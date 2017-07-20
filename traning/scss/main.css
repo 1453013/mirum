@@ -33,7 +33,8 @@ html, body {
   top: 0;
   background: white;
   width: 100%;
-  z-index: 1000; }
+  z-index: 1000;
+  height: 100px; }
   @media (max-width: 599px) {
     .header {
       display: none; } }
@@ -61,7 +62,8 @@ html, body {
       color: black;
       width: 12.14286%;
       font-size: 12px;
-      float: left; }
+      float: left;
+      height: 100px; }
       @media (min-width: 1800px) {
         .header .navbar-nav li {
           font-size: 18px; } }
@@ -72,8 +74,8 @@ html, body {
         .header .navbar-nav li {
           font-size: 8px; } }
       .header .navbar-nav li a {
-        padding-top: 35px;
-        padding-bottom: 35px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         color: black;
         padding-left: 0px;
         padding-right: 0px; }
@@ -195,10 +197,10 @@ html, body {
   color: #e95154; }
 
 .banner {
-  margin-top: 90px;
+  margin-top: 100px;
   background-image: url("../img/banner.png");
   background-size: 100% 100%;
-  height: 224px; }
+  height: 250px; }
   @media (min-width: 1800px) {
     .banner {
       height: 350px; } }
@@ -211,7 +213,7 @@ html, body {
       height: 180px; } }
 
 .banner-content {
-  padding-top: 30px;
+  padding-top: 35px;
   text-align: center; }
   @media (min-width: 1800px) {
     .banner-content {
@@ -243,7 +245,7 @@ html, body {
 .nav-tabs > li {
   width: 33.333%;
   border-radius: 0px;
-  height: 75px; }
+  height: 85px; }
 
 .nav-tabs > li > a {
   color: black;
@@ -251,8 +253,8 @@ html, body {
   text-align: center;
   font-size: 27px;
   border: none;
-  height: 75px;
-  padding-top: 17px;
+  height: 85px;
+  padding-top: 25px;
   letter-spacing: 2px; }
 
 .nav-tabs > li.active {
@@ -287,7 +289,7 @@ html, body {
 /*  */
 .tab-content {
   background-color: #ebebeb;
-  height: 682px; }
+  height: 768px; }
 
 .wrapper {
   padding-top: 50px;
@@ -323,9 +325,9 @@ img {
 
 .slick-slide img {
   margin: 0 auto;
-  max-height: 392px;
+  max-height: 442px;
   max-width: auto;
-  height: auto;
+  height: 442px;
   width: auto; }
 
 .slick-prev:before,
@@ -340,8 +342,8 @@ img {
 .slick-item-caption {
   text-align: center;
   font-family: 'BrandonText-Regular';
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 45px;
   font-size: 18px; }
   @media (min-width: 1800px) {
     .slick-item-caption {
@@ -349,9 +351,9 @@ img {
       white-space: nowrap; } }
 
 .slick-next, .slick-prev {
-  width: 28px;
-  height: 28px;
-  top: 111%; }
+  width: 31px;
+  height: 31px;
+  top: 110%; }
 
 .slick-prev {
   left: -40px; }
@@ -360,15 +362,15 @@ img {
   right: -40px; }
 
 #detail {
-  padding-bottom: 65px; }
+  margin-bottom: 90px; }
 
 .award {
-  padding-top: 45px;
+  padding-top: 60px;
   position: relative; }
 
 .award-wrapper {
   margin: 0 auto;
-  width: 400px; }
+  width: 430px; }
   @media (max-width: 599px) {
     .award-wrapper {
       width: 250px; } }
@@ -380,10 +382,10 @@ img {
 
 #awardteam {
   position: absolute;
-  top: 70%;
-  height: 400px;
-  width: 400px;
-  border: solid 10px #e95154;
+  top: 180px;
+  height: 430px;
+  width: 430px;
+  outline: solid 12px #e95154;
   z-index: -1; }
   @media (max-width: 599px) {
     #awardteam {
@@ -399,15 +401,21 @@ img {
 .bronze {
   color: #bd8769; }
 
+#teamsilver {
+  margin-top: 35px;
+  margin-bottom: 50px; }
+
 .team-info {
   text-align: center;
-  margin-top: 87px; }
+  margin-top: 100px; }
   @media (max-width: 599px) {
     .team-info {
       margin-top: 50px; } }
   .team-info h3 {
     font-family: 'iCielBrawls1';
-    font-size: 32px; }
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
     @media (min-width: 1800px) {
       .team-info h3 {
         font-size: 30px; } }
@@ -416,15 +424,19 @@ img {
         font-size: 20px;
         margin-top: 0px; } }
   .team-info h4 {
-    font-size: 18px;
-    font-weight: bold; }
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0px; }
     @media (max-width: 599px) {
       .team-info h4 {
         margin-top: 0px;
         font-size: 12px; } }
 
+.team-detail {
+  margin-bottom: 30px; }
+
 .shortlist {
-  margin-top: 32%;
+  margin-top: 440px;
   text-align: center; }
   @media (min-width: 1800px) {
     .shortlist {
@@ -442,39 +454,50 @@ img {
 .shortlist-wrapper {
   margin: 0 auto; }
 
-#shortlist-title h3 {
-  font-family: 'iCielBrawls1';
-  color: #e95154;
-  text-decoration: underline;
-  font-size: 32px; }
+#shortlist-title {
+  width: 20%;
+  margin: 0 auto;
+  white-space: nowrap; }
+  #shortlist-title h3 {
+    text-align: center;
+    font-family: 'iCielBrawls1';
+    color: #e95154;
+    font-size: 36px;
+    border-bottom: 2px solid #e95154;
+    padding-bottom: 0px;
+    margin-bottom: 0px; }
 
-#shortlist-teams .shorteaminfo {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-  #shortlist-teams .shorteaminfo h4 {
-    font-size: 18px;
-    margin-bottom: 0; }
-    @media (min-width: 1800px) {
-      #shortlist-teams .shorteaminfo h4 {
-        font-size: 23px; } }
-  #shortlist-teams .shorteaminfo p {
-    font-family: 'BrandonText-Regular';
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 0; }
-    @media (min-width: 1800px) {
-      #shortlist-teams .shorteaminfo p {
-        font-size: 20px; } }
+#shortlist-teams {
+  padding-top: 30px; }
+  #shortlist-teams .shorteaminfo {
+    margin-bottom: 20px; }
+    #shortlist-teams .shorteaminfo h4 {
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1; }
+      @media (min-width: 1800px) {
+        #shortlist-teams .shorteaminfo h4 {
+          font-size: 23px; } }
+    #shortlist-teams .shorteaminfo p {
+      font-family: 'BrandonText-Regular';
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 0; }
+      @media (min-width: 1800px) {
+        #shortlist-teams .shorteaminfo p {
+          font-size: 20px; } }
 
 .footer {
   background-color: #464646;
   color: white;
-  font-family: 'BrandonText-Regular'; }
+  font-family: 'BrandonText-Regular';
+  height: 410px; }
   .footer .row {
     padding-top: 50px;
     margin-left: 80px;
     margin-right: 80px;
-    padding-bottom: 35px; }
+    padding-bottom: 40px; }
     @media (min-width: 600px) and (max-width: 899px) and (orientation: portrait) {
       .footer .row {
         margin-left: 60px;
@@ -490,13 +513,14 @@ img {
     text-align: center;
     margin-left: 80px;
     margin-right: 80px;
+    padding-bottom: 10px;
     padding-bottom: 20px; }
     @media (max-width: 599px) {
       .footer .representatives {
         margin-left: 15px;
         margin-right: 15px; } }
     .footer .representatives p {
-      font-size: 18px; }
+      font-size: 20px; }
       @media (min-width: 1800px) {
         .footer .representatives p {
           font-size: 20px; } }
@@ -506,8 +530,8 @@ img {
     .footer .representatives img {
       margin-right: 10px;
       margin-left: 10px;
-      max-width: 150px;
-      max-height: auto;
+      max-height: 39px;
+      max-width: auto;
       width: auto;
       height: auto; }
       @media (min-width: 1800px) {
@@ -517,18 +541,22 @@ img {
         .footer .representatives img {
           max-width: 110px; } }
 
-@media (min-width: 1800px) {
-  .contact h4 {
-    font-size: 30px; } }
-@media (max-width: 599px) {
-  .contact h4 {
-    font-size: 15px; } }
-@media (min-width: 1800px) {
+.contact {
+  margin-left: 100px; }
+  @media (min-width: 1800px) {
+    .contact h4 {
+      font-size: 30px; } }
+  @media (max-width: 599px) {
+    .contact h4 {
+      font-size: 15px; } }
   .contact p {
-    font-size: 20px; } }
-@media (max-width: 599px) {
-  .contact p {
-    font-size: 11px; } }
+    font-size: 20px; }
+    @media (min-width: 1800px) {
+      .contact p {
+        font-size: 20px; } }
+    @media (max-width: 599px) {
+      .contact p {
+        font-size: 11px; } }
 
 .phone-break {
   display: none; }
