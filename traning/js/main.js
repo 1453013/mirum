@@ -103,3 +103,26 @@ $('.portfolio-item-slider').on('afterChange', function(event, slick, currentSlid
 });
 
 //$("#mySideBar").stick_in_parent();
+
+
+ $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    speed: 50,
+     cssEase: 'linear',
+    dots: true,
+    centerMode: true,
+    asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    arrows: false,
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    //autoplay: true,
+});
