@@ -1,0 +1,267 @@
+﻿Go
+Use PARKING
+Go
+
+SET STATISTICS IO ON;  
+SET STATISTICS TIME ON
+
+
+/*Phép chọn*/
+
+/*a-chimuc*/
+	/**/	
+	--CREATE NONCLUSTERED INDEX chontestachimuc
+	--ON DS_NHANVIEN(MANHOMNHANVIEN)
+
+	--Select * from DS_NHANVIEN where MANHOMNHANVIEN = 1
+
+	--DROP INDEX DS_NHANVIEN.chontestachimuc
+
+
+/*a-kochimuc*/
+	
+	--Select * from DS_NHANVIEN where MANHOMNHANVIEN = 1
+
+
+/*b-chimuc*/
+
+	--CREATE NONCLUSTERED INDEX chontestbchimuc
+	--ON DS_NHANVIEN(STT,MANHOMNHANVIEN)
+
+	--Select * from DS_NHANVIEN where STT >30 AND MANHOMNHANVIEN = 2
+
+	--DROP INDEX DS_NHANVIEN.chontestbchimuc
+
+/*b-kochimuc*/
+	--Select * from DS_NHANVIEN where STT >30 AND MANHOMNHANVIEN = 2
+
+
+/*c-chimuc*/
+	--CREATE NONCLUSTERED INDEX chontestcchimuc
+	--ON DS_NHANVIEN(TENNHANVIEN)
+
+	--Select * from DS_NHANVIEN where TENNHANVIEN = 'Trung'
+
+	--DROP INDEX DS_NHANVIEN.chontestcchimuc
+
+/*c-kochimuc*/
+	--Select * from DS_NHANVIEN where TENNHANVIEN = 'Trung'
+
+
+/*Phép kết*/
+
+/*a-chimuc*/
+	
+
+	--CREATE  INDEX kettesta1
+	--ON DS_LOAIVE(DONGIA)
+
+	--CREATE  INDEX kettesta2
+	--ON DSXE_VAORA(SOTIENTHU_THEOLUOT)
+
+	--Select * from DSXE_VAORA inner join DS_LOAIVE on 
+	--				DS_LOAIVE.DONGIA = DSXE_VAORA.SOTIENTHU_THEOLUOT
+
+	--DROP INDEX DS_LOAIVE.kettesta1
+
+	--DROP INDEX DSXE_VAORA.kettesta2
+
+/*a-kochimuc*/
+
+
+--Select * from DSTHE inner join DS_LOAIXE_GIATIEN on 
+--					DSTHE.LOAIXE = DS_LOAIXE_GIATIEN.MA_LOAIXE 
+
+
+
+/*b-chimuc*/
+	
+
+
+--create index kettestb1
+--ON DSXE_VAORA(NHANVIEN_CONGVAO,NHANVIEN_CONGRA)
+
+--create index kettestb2
+--ON DS_NHANVIEN(MANV)
+
+--Select * FROM DSXE_VAORA 
+--INNER JOIN DS_NHANVIEN as nv1 on nv1.MANV = DSXE_VAORA.NHANVIEN_CONGVAO
+--INNER JOIN DS_NHANVIEN as nv2 on nv2.MANV = DSXE_VAORA.NHANVIEN_CONGRA
+--WHERE DSXE_VAORA.LOAIXE ='XG'
+--AND DSXE_VAORA.TRANGTHAI = '3'
+
+
+
+--DROP INDEX DSXE_VAORA.kettestb1
+
+--DROP INDEX DS_NHANVIEN.kettestb2
+
+
+
+/*b-kochimuc*/
+
+--Select * FROM DSXE_VAORA 
+--INNER JOIN DS_NHANVIEN as nv1 on nv1.MANV = DSXE_VAORA.NHANVIEN_CONGVAO
+--INNER JOIN DS_NHANVIEN as nv2 on nv2.MANV = DSXE_VAORA.NHANVIEN_CONGRA
+--WHERE DSXE_VAORA.LOAIXE ='XG'
+--AND DSXE_VAORA.TRANGTHAI = '3'
+
+
+
+/*c-chimuc*/
+
+	--CREATE  INDEX kettestc1
+	--ON DS_LOAIXE_GIATIEN(MA_LOAIXE)
+
+	--CREATE  INDEX kettestc2
+	--ON DSTHE(LOAIXE)
+
+	--Select * from DSTHE inner join DS_LOAIXE_GIATIEN on 
+	--				DSTHE.LOAIXE = DS_LOAIXE_GIATIEN.MA_LOAIXE 
+
+	--DROP INDEX DS_LOAIXE_GIATIEN.kettestc1
+
+	--DROP INDEX DSTHE.kettestc2
+	
+
+/*c-kochimuc*/
+
+
+--Select * from DSTHE inner join DS_LOAIXE_GIATIEN on 
+--					DSTHE.LOAIXE = DS_LOAIXE_GIATIEN.MA_LOAIXE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*cau 2*/
+
+
+/*co_chimuc*/
+
+	--CREATE NONCLUSTERED INDEX testinsert
+	--ON DS_NHANVIEN(TENNHANVIEN)
+
+	--SET IDENTITY_INSERT  [dbo].[DS_NHANVIEN] ON
+
+	--INSERT [dbo].[DS_NHANVIEN] ([MANV], [TENNHANVIEN], [STT], [MATKHAU], [HINH], [MANHOMNHANVIEN]) VALUES 
+	--('3284196560','Nguyễn Nam Thanh',60,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196561','Lê Ngọc Dũng',61,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196562','Vũ Chiêu Phong',62,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196563','Hoàng Công Phụng',63,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196564','Lương Duy Thắng',64,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196565','Đỗ Ðình Chương',65,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196566','Phạm Mạnh Hà',66,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196567','Lạc Ðạt Hòa',67,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196568','Đỗ Việt Khang',68,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196569','Vương Hoài Tín',69,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196570','Nguyễn Mạnh Chiến',70,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196571','Sái An Nguyên',71,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196572','Huỳnh Ðông Dương',72,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196573','Chu Quốc Vũ',73,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196574','Nguyễn Quốc Hoàng',74,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196575','Triệu Vĩnh Hưng',75,'8FF7C62AAF6276BE4C5674F55B56450G',null,1);
+
+	--Update DS_NHANVIEN SET MANHOMNHANVIEN = 2 WHERE 
+	--TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Lê Ngọc Dũng' OR 
+	--TENNHANVIEN = 'Vũ Chiêu Phong' OR 
+	--TENNHANVIEN = 'Hoàng Công Phụng' OR 
+	--TENNHANVIEN = 'Lương Duy Thắng' OR 
+	--TENNHANVIEN = 'Đỗ Ðình Chương' OR 
+	--TENNHANVIEN = 'Nguyễn Mạnh Chiến' OR 
+	--TENNHANVIEN = 'Phạm Mạnh Hà' OR 
+	--TENNHANVIEN = 'Lạc Ðạt Hòa' OR 
+	--TENNHANVIEN = 'Đỗ Việt Khang' OR 
+	--TENNHANVIEN = 'Vương Hoài Tín' OR 
+	--TENNHANVIEN = 'Sái An Nguyên' OR 
+	--TENNHANVIEN = 'Huỳnh Ðông Dương' OR 
+	--TENNHANVIEN = 'Chu Quốc Vũ' OR 
+	--TENNHANVIEN = 'Nguyễn Quốc Hoàng' OR 
+	--TENNHANVIEN = 'Triệu Vĩnh Hưng' ;
+
+	--Delete from DS_NHANVIEN where TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Lê Ngọc Dũng' OR 
+	--TENNHANVIEN = 'Vũ Chiêu Phong' OR 
+	--TENNHANVIEN = 'Hoàng Công Phụng' OR 
+	--TENNHANVIEN = 'Lương Duy Thắng' OR 
+	--TENNHANVIEN = 'Đỗ Ðình Chương' OR 
+	--TENNHANVIEN = 'Nguyễn Mạnh Chiến' OR 
+	--TENNHANVIEN = 'Phạm Mạnh Hà' OR 
+	--TENNHANVIEN = 'Lạc Ðạt Hòa' OR 
+	--TENNHANVIEN = 'Đỗ Việt Khang' OR 
+	--TENNHANVIEN = 'Vương Hoài Tín' OR 
+	--TENNHANVIEN = 'Sái An Nguyên' OR 
+	--TENNHANVIEN = 'Huỳnh Ðông Dương' OR 
+	--TENNHANVIEN = 'Chu Quốc Vũ' OR 
+	--TENNHANVIEN = 'Nguyễn Quốc Hoàng' OR 
+	--TENNHANVIEN = 'Triệu Vĩnh Hưng' ;
+
+	--DROP INDEX DS_NHANVIEN.testinsert
+
+	--SET IDENTITY_INSERT  [dbo].[DS_NHANVIEN] OFF
+
+/*khong_chimuc*/
+
+	--INSERT [dbo].[DS_NHANVIEN] ([MANV], [TENNHANVIEN], [STT], [MATKHAU], [HINH], [MANHOMNHANVIEN]) VALUES 
+	--('3284196560','Nguyễn Nam Thanh',60,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196561','Lê Ngọc Dũng',61,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196562','Vũ Chiêu Phong',62,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196563','Hoàng Công Phụng',63,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196564','Lương Duy Thắng',64,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196565','Đỗ Ðình Chương',65,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196566','Phạm Mạnh Hà',66,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196567','Lạc Ðạt Hòa',67,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196568','Đỗ Việt Khang',68,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196569','Vương Hoài Tín',69,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196570','Nguyễn Mạnh Chiến',70,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196571','Sái An Nguyên',71,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196572','Huỳnh Ðông Dương',72,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196573','Chu Quốc Vũ',73,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196574','Nguyễn Quốc Hoàng',74,'8FF7C62AAF6276BE4C5674F55B56450G',null,1),
+	--('3284196575','Triệu Vĩnh Hưng',75,'8FF7C62AAF6276BE4C5674F55B56450G',null,1);
+
+	--Update DS_NHANVIEN SET MANHOMNHANVIEN = 2 WHERE 
+	--TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Lê Ngọc Dũng' OR 
+	--TENNHANVIEN = 'Vũ Chiêu Phong' OR 
+	--TENNHANVIEN = 'Hoàng Công Phụng' OR 
+	--TENNHANVIEN = 'Lương Duy Thắng' OR 
+	--TENNHANVIEN = 'Đỗ Ðình Chương' OR 
+	--TENNHANVIEN = 'Nguyễn Mạnh Chiến' OR 
+	--TENNHANVIEN = 'Phạm Mạnh Hà' OR 
+	--TENNHANVIEN = 'Lạc Ðạt Hòa' OR 
+	--TENNHANVIEN = 'Đỗ Việt Khang' OR 
+	--TENNHANVIEN = 'Vương Hoài Tín' OR 
+	--TENNHANVIEN = 'Sái An Nguyên' OR 
+	--TENNHANVIEN = 'Huỳnh Ðông Dương' OR 
+	--TENNHANVIEN = 'Chu Quốc Vũ' OR 
+	--TENNHANVIEN = 'Nguyễn Quốc Hoàng' OR 
+	--TENNHANVIEN = 'Triệu Vĩnh Hưng' ;
+
+	--Delete from DS_NHANVIEN where TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Nguyễn Nam Thanh' OR 
+	--TENNHANVIEN = 'Lê Ngọc Dũng' OR 
+	--TENNHANVIEN = 'Vũ Chiêu Phong' OR 
+	--TENNHANVIEN = 'Hoàng Công Phụng' OR 
+	--TENNHANVIEN = 'Lương Duy Thắng' OR 
+	--TENNHANVIEN = 'Đỗ Ðình Chương' OR 
+	--TENNHANVIEN = 'Nguyễn Mạnh Chiến' OR 
+	--TENNHANVIEN = 'Phạm Mạnh Hà' OR 
+	--TENNHANVIEN = 'Lạc Ðạt Hòa' OR 
+	--TENNHANVIEN = 'Đỗ Việt Khang' OR 
+	--TENNHANVIEN = 'Vương Hoài Tín' OR 
+	--TENNHANVIEN = 'Sái An Nguyên' OR 
+	--TENNHANVIEN = 'Huỳnh Ðông Dương' OR 
+	--TENNHANVIEN = 'Chu Quốc Vũ' OR 
+	--TENNHANVIEN = 'Nguyễn Quốc Hoàng' OR 
+	--TENNHANVIEN = 'Triệu Vĩnh Hưng' ;
